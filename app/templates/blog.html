@@ -2,4 +2,16 @@
 
 {% block content %}
 <p>Sup dude you reached the blog page</p>
+<hr>
+<ul class="list-group">
+    {% for p in posts %}
+        <li class="list-group-item">
+            {{ p }}
+
+        </li>
+    {% endfor %}
+</ul>
+
+    
+
 {% endblock content %}
