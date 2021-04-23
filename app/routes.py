@@ -1,14 +1,19 @@
 from app import app
+from flask import render_template
 
 
 @app.route('/')
 def home():
-    return 'Hello, World!'
+    return render_template('index.html')
 
 @app.route('/contact')
 def contact():
-    return "This is the contact page!"
+    return render_template('contact.html')
 
 @app.route('/blog')
 def blog():
-    return "This is the new blog page!"
+    return render_template('blog.html')
+
+@app.route('/events')
+def events():
+    return render_template('events.html')
